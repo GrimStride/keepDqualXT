@@ -81,9 +81,9 @@ def gendiff(original, modified):
     
 
 def process(original, modified, diff):
-    with Image(original) as s:
+    with Image(filename=original) as s:
         ogw, ogh = s.size
-    with Image(diff) as img:
+    with Image(filename=diff) as img:
         wi = 0
         hi = 0
         width, height = img.size
